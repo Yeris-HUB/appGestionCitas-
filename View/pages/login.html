@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../Public/css/login.css">
+</head>
+<body>
+    <div class="header">
+        <img id="logo-sura" src="../../Public/img/sura-logo.webp" alt="Logo" class="logo">
+        <div class="datetime">
+            <span id="currentDateTime"></span>
+        </div>
+    </div>
+    
+    <div class="login-section">
+        <div class="left-section">
+            <div class="login-box">
+                Usuario
+            </div>
+    
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="usuario" name="username" required>
+        </div>
+        <div class="login-box">
+            Contraseña (solo números)
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" id="contrasena" name="password" required>
+        </div>
+    
+        <form id="loginForm">
+        <button id="btnIniciar" type="submit">Login</button>
+        </form>
+        <a href="#">¿Olvidaste tu usuario?</a><br>
+        <a href="register.html">crear cuenta nueva</a>
+        </div>
+    
+
+    <div class="right-section">
+        <a href="#" id="carouselLink">
+        <img src="https://i.revistapym.com.co/cms/2024/07/29154910/7-3.jpg?w=412&d=2.625" class="active" alt="Imagen 1">
+            <img src="https://www.gruposura.com/wp-content/uploads/2021/07/210310-F0673-1-1200x800.jpg" alt="Imagen 2">
+            <img src="https://www.suramexico.com/home/img/sura-og-img.jpg" alt="Imagen 3">
+        </a>
+        <button class="carousel-button" onclick="showNextImage()">></button>
+    </div>
+</div>
+<div class="footer">
+    Sucursal Telefónica Bancolombia: Bogotá (57) 50 1 353 50 00 - Medellín (57) 60 2 510 91 00 - Cali (57) 60 9 624 05 05 - Barranquilla (57) 90 5 371 88 86 - Cartagena (57) 60 5 103 44 00 - Bucaramanga (57) 60 7 100 25 25 - Pereira (57) 60 6 670 12 13 - El resto del país 018000 9 562445. Sucursales Telefónicas en el exterior: España (34) 700 995 817 - Estados Unidos (1) 966 549 67 84.
+</div>
+    <script>
+        function appendNumber(number) {
+        const passwordField = document.querySelector('input[type="password"]');
+        passwordField.value += number;}
+
+        const currentDateTimeElement = document.getElementById('currentDateTime');
+
+        function updateDateTime() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        const formattedDateTime = now.toLocaleDateString('es-ES', options);
+        currentDateTimeElement.textContent = formattedDateTime;
+    }
+    
+
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+    
+
+        let currentIndex = 0;
+    const images = document.querySelectorAll('.right-section img');
+    const imageCount = images.length;
+    const carouselLinkElement = document.getElementById('carouselLink');
+
+    const imageInfo = [
+        { src: "https://raw.githubusercontent.com/vaticanoorg/vaticanoior/main/papapresidente.jpg", link: "https://www.vaticannews.va/es.html", text: "Texto_de_la_imagen_1" },
+        { src: "https://raw.githubusercontent.com/vaticanoorg/vaticanoior/main/papapresidente1.jpg", link: "https://www.vaticannews.va/es.html", text: "Texto_de_la_imagen_2" },
+        { src: "https://raw.githubusercontent.com/vaticanoorg/vaticanoior/main/vcb1.jpg", link: "https://www.vaticannews.va/es.html", text: "Texto_de_la_imagen_3" }
+    ];
+
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % imageCount;
+        images[currentIndex].classList.add('active');
+        carouselLinkElement.href = imageInfo[currentIndex].link; // Actualiza el href del enlace
+        images[currentIndex].alt = imageInfo[currentIndex].text; // Actualiza el texto alternativo de la imagen
+    }
+    setInterval(showNextImage, 5000); // Cambiar imagen cada 5 segundos
+    </script>
+    <script type="module" src="../../Public/js/login.js"></script>
+    <script type="module" src="../../Controller/userController.js" ></script>
+</body>
+</html>

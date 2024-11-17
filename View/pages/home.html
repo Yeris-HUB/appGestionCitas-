@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Citas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Public/css/listarCitas.css">
+</head>
+<body class="flex bg-gray-100" style="background-color:rgb(225, 232, 255)" >
+
+    <!-- Menú hamburguesa y barra de navegación -->
+<nav class="bg-blue-600 text-white p-4 fixed top-0 w-full flex justify-between items-center z-10">
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+    <img id="logo-sura" src="../../Public/img/sura-logo.webp" alt="Logo">
+    <div class="flex items-center space-x-4">
+        <span id="nombreUsuario" class="font-semibold"></span>
+        <button id="btnCerrarSesion" class="bg-blue-950 hover:bg-blue-950 text-white font-semibold py-1 px-4 rounded">Cerrar Sesión</button>
+    </div>
+</nav>
+<aside id="sidebar" class="w-1/6 bg-blue-500 text-white p-8 flex flex-col space-y-4 mt-16 fixed h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+    <h1 class="text-xl font-bold text-slate-500 tracking-widest">Menú</h1>
+    <button id="btnInicio" class="text-left w-full bg-blue-950 text-white font-semibold py-2 px-4 rounded hover:bg-blue-950 transition duration-200">Inicio</button>
+    <button id="btnMisCitas" class="text-left w-full bg-blue-950 text-white font-semibold py-2 px-4 rounded hover:bg-blue-950 transition duration-200">Mis Citas</button>
+
+    <div id="submenuCitas" class="space-y-1 mt-3 hidden">
+        <button id="btnMostrarConfirmadas" class="text-left cyan-900 text-white font-semibold py-2 px-4 rounded hover:Blue-800 transition duration-200">Citas Confirmadas</button>
+        <button id="btnMostrarPendientes" class="text-left bg-sky-700 text-white font-semibold py-2 px-4 rounded hover:bg-sky-600 transition duration-200">Citas Pendientes</button>
+    </div>
+    <button id="btnAgendarCitas" class="text-left w-full bg-blue-950 text-white font-semibold py-2 px-4 rounded hover:bg-blue-950 transition duration-200">Agendar Cita</button>
+</aside>
+        <main id="mainContent" class="flex-1 p-10 overflow-y-auto mt-16 ml-[16.66%]">
+        <h1 id="greeting" class="text-3xl font-semibold mb-4">¡Bienvenido a SuCitaManage!</h1>
+    <div id="bannerProximaCita" class=" bg-blue-500 text-white p-4 rounded-lg shadow-lg mb-4 mt-16 w-1/3 ">
+        <h2 class="text-2xl font-semibold">Tu próxima Cita</h2>
+        <p id="detalleProximaCita" class="mt-2 text-lg"></p>
+    </div>
+        <img src="../../Public/img/logo-tigre-sura_2.jpg" class="w-1/7  z-10" class="logo" alt="">
+        <p class="text-gray-1000 mt-100" id="texto-home">
+            SuraManage es la solución completa para gestionar tus citas médicas de manera rápida y sencilla <br> 
+        </p>
+    </main>
+    <script type="module" src="../../Modelo/citasModel.js"></script>
+    <script type="module" src="../../Controller/citasController.js"></script>
+    <script type="module" src="../../Public/js/listarCitas.js"></script>
+</body>
+</html>

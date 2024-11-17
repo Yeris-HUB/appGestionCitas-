@@ -1,0 +1,422 @@
+/* Configuración de estilos básicos en CSS */
+body {
+    font-family:Times, 'Times New Roman', serif; 
+    color: #333; /* Color de texto oscuro para buen contraste */
+    background-color: #f9f9f9; /* Fondo claro para buena lectura */
+    height: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+    font-weight: 700; /* Usa el grosor más alto para los títulos */
+    color: #426cde; /* Azul oscuro para un estilo profesional (ajústalo según tu temática) */
+}
+
+/* Estilos para el saludo de bienvenida */
+#greeting {
+    font-size: 1.5rem; /* Tamaño de letra grande para destacar */
+    color: #374151; /* Un gris oscuro neutro */
+}
+
+/* Estilos para el texto de párrafo */
+p {
+    font-size: 1rem; /* Tamaño de letra cómodo para lectura */
+    line-height: 1.6; /* Espaciado de línea para legibilidad */
+    color: #2b4263; /* Un gris medio */
+}
+
+/* Estilos para botones */
+button {
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+nav {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #1E40AF; /* Azul oscuro */
+    padding: 16px;
+}
+/* Estilos específicos para el nombre del usuario en el navbar */
+#nombreUsuario {
+    font-weight: 600;
+    color: #E0E7FF; /* Un tono más claro de azul para el nombre */
+}
+/* Botón de cerrar sesión */
+#btnCerrarSesion {
+    background-color: #172554; /* Rojo para contrastar con el azul del navbar */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+#greeting {
+    font-size: 1.5rem;
+    color: #374151;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+nav {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #1E40AF;
+    padding: 16px;
+}
+.logo{
+    top: 100%;
+    left: 100%;
+}
+#logo-sura{
+    width: 130px;
+}
+nav h1 {
+    color: white;
+}
+
+#nombreUsuario {
+    font-weight: 600;
+    color: #E0E7FF;
+}
+
+#btnCerrarSesion {
+    background-color: #172554;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+#btnCerrarSesion:hover {
+    background-color: #1e3a8a;
+}
+/* Estilos del botón */
+
+
+button {
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 8px 16px;
+    transition: background-color 0.10s;
+}
+
+button:hover {
+    background-color: #172554;
+    color: white;
+}
+
+#btnMostrarConfirmadas{
+    background-color: #1410e6;
+}
+
+#btnMostrarPendientes{
+    background-color: #1410e6;
+}
+#btnMostrarConfirmadas:hover, #btnMostrarPendientes:hover {
+    background-color: #172554;
+    color: white;
+}
+
+/* Fondo con efecto parallax */
+body {
+    background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+    overflow-x: hidden;
+}
+
+#mainContent {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 80%;
+    text-align: center;
+    color: #374151;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px); /* Efecto de difuminado detrás */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de desvanecimiento */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de burbujas decorativas en el fondo */
+#mainContent::before,
+#mainContent::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 6s infinite ease-in-out;
+}
+
+#mainContent::before {
+    width: 200px;
+    height: 200px;
+    background-color: #BBDEFB;
+    top: -80px;
+    left: -80px;
+}
+
+#mainContent::after {
+    width: 150px;
+    height: 150px;
+    background-color: #90CAF9;
+    bottom: -60px;
+    right: -60px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Estilo para el título principal */
+#mainContent h1 {
+    font-size: 3rem;
+    color: #1E3A8A;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    transition: color 0.3s, transform 0.2s;
+    margin-top: 50px;
+}
+
+#mainContent h1:hover {
+    color: #1565C0;
+    transform: scale(1.05);
+}
+
+/* Estilo para subtítulos */
+#mainContent h2 {
+    font-size: 2rem;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Estilo para párrafos */
+#mainContent p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #546E7A;
+    animation: slideInRight 1s ease-in-out;
+}
+
+#texto-home{
+    font-size: 2rem !important;
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Icono decorativo */
+#mainContent .icon {
+    font-size: 2.5rem;
+    color: #42A5F5;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Botón de acción */
+.action-btn {
+    display: inline-block;
+    background-color: #1E88E5;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #1565C0;
+    transform: scale(1.05);
+}
+
+
+/* Estilo de aside con transición suave */
+#sidebar {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Clase para mostrar el aside */
+.sidebar-visible {
+    transform: translateX(0); /* Trae el aside al viewport */
+}
+
+/* Botón de mostrar/ocultar */
+#toggleAside {
+    z-index: 20; /* Asegura que el botón esté encima del aside */
+}
+/* Estilo para el banner de la próxima cita */
+#bannerProximaCita {
+    position: absolute; /* Posición absoluta dentro del contenedor relativo */
+    top: 48%; /* Ajusta este valor según la ubicación deseada */
+    left: 70%; /* Ajusta este valor según la ubicación deseada */
+    transform: translate(-50%, -50%); /* Para centrarlo mejor si es necesario */
+    background-color: #BBDEFB; /* Azul vibrante */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que el banner quede por encima del logo */
+}
+
+/* Asegura que el logo quede detrás */
+.logo {
+    position: relative;
+    z-index: 5; /* Menor que el banner */
+}
+
+#bannerProximaCita h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#bannerProximaCita p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+aside {
+    width: 16.66%; /* Ajusta si prefieres otro ancho */
+    height: 90vh; /* Hace que el aside cubra toda la altura de la pantalla */
+    position: fixed;
+    margin-top: 10rem; /* Para acomodar el espacio del navbar */
+}
+main {
+    left: 8.5%;
+}
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Menú hamburguesa visible solo en pantallas pequeñas */
+#menu-toggle {
+    display: flex;
+    cursor: pointer;
+}
+
+/* Ocultar botón en pantallas grandes */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+}
+
+/* Barra lateral por defecto (oculta en pantallas pequeñas) */
+#sidebar {
+    width: 14rem;
+    height: 100vh;
+    background-color: #007BFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mostrar barra lateral en pantallas grandes */
+@media (min-width: 768px) {
+    #sidebar {
+        transform: translateX(0);
+    }
+}
+
+/* Estilo para la barra lateral abierta en pantallas pequeñas */
+#sidebar.open {
+    transform: translateX(0);
+}
+.content {
+    width: inherit;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cardEspecialista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    gap: 20px 0px;
+}
+#cardEspecialista > select{
+    width: 80%;
+    height: 30px;
+}
+/* Estilo cuando está seleccionado */
+.selected {
+    animation: scaleUp 0.5s ease; /* Animación inicial al seleccionarse */
+  }
+  
+  /* Cuando el cursor pasa por encima del elemento seleccionado */
+  .selected:hover {
+    transform: scale(1.15); /* Aumenta aún más el tamaño */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombras más intensas */
+  }
+  
+  /* Cuando el cursor pasa sobre cualquier elemento (no seleccionado) */
+  .doctor-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombras suaves */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavidad en el cambio */
+  }
+  
+  /* Animación personalizada */
+  @keyframes scaleUp {
+    from {
+      transform: scale(1); /* Tamaño inicial */
+    }
+    to {
+      transform: scale(1.1); /* Tamaño ampliado */
+    }
+  }
